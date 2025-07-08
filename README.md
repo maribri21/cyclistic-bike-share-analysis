@@ -18,7 +18,9 @@ This project analyzes the Cyclistic bike-share program data from April 2024 to A
 4. Building dashboards to communicate insights
 
 ## Key Findings
-*(Add your main insights here, for example: Most frequent ride times, differences between member and casual riders, popular stations, etc.)*
+- Casual riders take longer rides but mostly on weekends
+- Annual members ride more frequently and during weekdays
+- Classic bikes are the most used across all user types
 
 ## How to Use This Repo
 - `SQL_queries.sql`: Contains all SQL scripts used for cleaning and analysis
