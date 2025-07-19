@@ -1,6 +1,10 @@
--- Cyclistic Bike Share Analysis
+-- ======================================================
 -- File: weekly_trends.sql
--- Description: Analyze ride trends by day of week and user type
+-- Purpose: Analyze trip trends by day of the week and hour
+-- Includes: Total rides by weekday, hourly ride volume by user type
+-- Tool: Google BigQuery
+-- ======================================================
+
 
 -- Total number of rides by day of week and user type
 SELECT
