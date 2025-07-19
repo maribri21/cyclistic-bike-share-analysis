@@ -1,6 +1,10 @@
--- Cyclistic Bike Share Analysis
+-- ======================================================
 -- File: combine_trips.sql
--- Description: Combines 13 monthly trip tables (from Apr 2024 to Apr 2025) into one
+-- Purpose: Merge monthly Cyclistic trip data (April 2024 – April 2025)
+-- Output: Combined table 'all_trips_2024_2025'
+-- Tool: Google BigQuery
+-- ======================================================
+
 
 CREATE OR REPLACE TABLE `cyclistic-bike-analysis-460522.cyclistic_trips.all_trips_2024_2025` AS
 SELECT * FROM `cyclistic-bike-analysis-460522.cyclistic_trips.tripdata_2024_04`
