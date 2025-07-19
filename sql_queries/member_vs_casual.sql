@@ -1,7 +1,9 @@
--- Cyclistic Bike Share Analysis
+-- ======================================================
 -- File: member_vs_casual.sql
--- Description: Compares ride behavior between annual members and casual riders
--- Data: Combined dataset from April 2024 to April 2025
+-- Purpose: Compare behaviors between casual riders and annual members
+-- Includes: Average ride duration, bike type preference, usage patterns
+-- Tool: Google BigQuery
+-- ======================================================
 
 -- 1. Average ride length per user type
 SELECT
