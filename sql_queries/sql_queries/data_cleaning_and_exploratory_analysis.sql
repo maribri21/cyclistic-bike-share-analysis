@@ -1,3 +1,11 @@
+-- ======================================================
+-- File: data_cleaning_and_exploratory_analysis.sql
+-- Purpose: Clean Cyclistic trip data and create new columns for analysis
+-- Includes: Removing invalid rows, calculating ride duration, adding day/month/hour
+-- Tool: Google BigQuery
+-- ======================================================
+
+
 -- ========================================
 -- DATA CLEANING
 -- ========================================
