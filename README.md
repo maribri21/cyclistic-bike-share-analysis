@@ -27,6 +27,18 @@ This project analyzes the Cyclistic bike-share program data from April 2024 to A
 
 4. **Data Visualization**  
    - Built Tableau dashboards to communicate insights and trends
+     
+## 📈 Dashboard
+
+Explore the interactive Tableau dashboard below to visualize key usage trends by time, rider type, and bike type:
+
+🔗 [**View Cyclistic Usage Trends Dashboard**](https://public.tableau.com/views/CyclisticUsageTrends/CyclisticBikeShareUsageTrends?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+> Includes visualizations such as:
+> - Rides by day of the week
+> - Rides by hour of day
+> - Bike type usage
+> - Average ride duration by month
 
 ## Key Findings
 - Casual riders take longer rides but mostly on weekends
