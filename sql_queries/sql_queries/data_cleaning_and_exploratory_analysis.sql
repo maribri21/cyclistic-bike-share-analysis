@@ -32,7 +32,10 @@ ADD COLUMN ride_duration_mins INT64;
 
 -- Populate ride_duration_mins using timestamp difference
 UPDATE cyclistic_trips.all_trips_2024_2025
-SET ride_duration_mins = TIMESTAMP_DIFF(ended_at, started_at, MINUTE);
+SET    ride_duration_mins = TIMESTAMP_DIFF(ended_at, started_at, MINUTE)
+WHERE  ride_duration_mins IS NULL            -- only rows that still need a value
+  AND  started_at IS NOT NULL                -- extra safety
+  AND  ended_at   IS NOT NULL;
 
 -- Add new time-based columns to help identify patterns
 ALTER TABLE cyclistic_trips.all_trips_2024_2025
@@ -42,9 +45,14 @@ ADD COLUMN hour INT64;            -- Hour of day (0–23)
 
 -- Populate the new time-based columns
 UPDATE cyclistic_trips.all_trips_2024_2025
-SET day_of_week = FORMAT_TIMESTAMP('%A', started_at),
-    month = FORMAT_TIMESTAMP('%Y-%m', started_at),
-    hour = EXTRACT(HOUR FROM started_at);
+SET 
+  day_of_week = FORMAT_TIMESTAMP('%A', started_at),
+  month = FORMAT_TIMESTAMP('%Y-%m', started_at),
+  hour = EXTRACT(HOUR FROM started_at)
+WHERE 
+  day_of_week IS NULL 
+  OR month IS NULL 
+  OR hour IS NULL;
 
 -- ========================================
 -- EXPLORATORY ANALYSIS QUERIES
